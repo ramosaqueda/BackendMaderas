@@ -10,7 +10,7 @@ const app = express();
 
 // db connection
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(process.env.DATABASE_ATLAS, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

@@ -15,8 +15,10 @@
     "express": "^4.17.3",
     "firebase-admin": "^10.0.2",
     "jsonwebtoken": "^8.5.1",
+    "mercadopago": "^1.5.13",
     "mongoose": "^6.3.0",
     "morgan": "^1.10.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "transbank-sdk": "^3.0.2"
   }
 }

@@ -37,17 +37,17 @@ exports.listPopular = async (req, res) => {
 };
 
 exports.listByCatergory = async (req, res) => {
-  console.log(req.body.idCategory);
-  //  category: product.category,
-  console.log(req.params.idCategory);
+  console.log(req.query);
+  let idcategory = req.query['idCategory'];
   let products = await Product.find({
-    category: mongoose.Types.ObjectId(req.body.idCategory),
+    category: mongoose.Types.ObjectId(idcategory),
   })
     .populate('category')
     .sort([['createdAt', 'desc']])
     .exec();
   res.json(products);
 };
+
 exports.remove = async (req, res) => {
   try {
     const deleted = await Product.findOneAndRemove({
